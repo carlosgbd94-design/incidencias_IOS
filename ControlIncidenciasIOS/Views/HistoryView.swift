@@ -44,7 +44,7 @@ struct HistoryView: View {
                         TextField("Buscar en observaciones...", text: $searchQuery)
                             .font(.system(size: 14))
                         if !searchQuery.isEmpty {
-                            Button(action = { searchQuery = "" }) {
+                            Button(action: { searchQuery = "" }) {
                                 Image(systemName: "xmark.circle.fill")
                                     .foregroundColor(.secondary)
                             }
@@ -55,7 +55,7 @@ struct HistoryView: View {
                     .background(Color(UIColor.secondarySystemBackground))
                     .cornerRadius(20)
 
-                    Button(action = { showMonthPicker = true }) {
+                    Button(action: { showMonthPicker = true }) {
                         HStack(spacing: 4) {
                             Image(systemName: "line.3.horizontal.decrease.circle")
                             Text("Mes")
