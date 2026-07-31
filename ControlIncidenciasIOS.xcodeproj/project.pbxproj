@@ -18,6 +18,7 @@
 		A10000172C5A000100000001 /* AddEditRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000182C5A000100000001 /* AddEditRecordView.swift */; };
 		A10000192C5A000100000001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100001A2C5A000100000001 /* SettingsView.swift */; };
 		A100001B2C5A000100000001 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100001C2C5A000100000001 /* MainTabView.swift */; };
+		A10000302C5A000100000001 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000312C5A000100000001 /* ThemeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A10000062C5A000100000001 /* RecordEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/RecordEntity.swift; sourceTree = "<group>"; };
 		A10000082C5A000100000001 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/UserProfile.swift; sourceTree = "<group>"; };
 		A10000102C5A000100000001 /* GlassTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme/GlassTheme.swift; sourceTree = "<group>"; };
+		A10000312C5A000100000001 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme/ThemeManager.swift; sourceTree = "<group>"; };
 		A10000122C5A000100000001 /* RecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/RecordViewModel.swift; sourceTree = "<group>"; };
 		A10000142C5A000100000001 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/DashboardView.swift; sourceTree = "<group>"; };
 		A10000162C5A000100000001 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/HistoryView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				A10000062C5A000100000001 /* RecordEntity.swift */,
 				A10000082C5A000100000001 /* UserProfile.swift */,
 				A10000102C5A000100000001 /* GlassTheme.swift */,
+				A10000312C5A000100000001 /* ThemeManager.swift */,
 				A10000122C5A000100000001 /* RecordViewModel.swift */,
 				A10000142C5A000100000001 /* DashboardView.swift */,
 				A10000162C5A000100000001 /* HistoryView.swift */,
@@ -144,6 +147,7 @@
 				A10000052C5A000100000001 /* RecordEntity.swift in Sources */,
 				A10000072C5A000100000001 /* UserProfile.swift in Sources */,
 				A10000092C5A000100000001 /* GlassTheme.swift in Sources */,
+				A10000302C5A000100000001 /* ThemeManager.swift in Sources */,
 				A10000112C5A000100000001 /* RecordViewModel.swift in Sources */,
 				A10000132C5A000100000001 /* DashboardView.swift in Sources */,
 				A10000152C5A000100000001 /* HistoryView.swift in Sources */,

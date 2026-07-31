@@ -23,113 +23,106 @@ struct HistoryView: View {
     }
 
     var body: some View {
-        VStack(spacing: 0) {
-            VStack(alignment: .leading, spacing: 4) {
-                Text("Historial")
-                    .font(.system(size: 32, weight: .bold))
-                Text("\(monthNames[viewModel.filterMonth]) \(String(viewModel.filterYear))")
-                    .font(.system(size: 15, weight: .medium))
-                    .foregroundColor(.secondary)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal, 20)
-            .padding(.top, 10)
-            .padding(.bottom, 12)
-
-            VStack(spacing: 10) {
-                HStack(spacing: 10) {
-                    HStack {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(GlassColors.samsungBlue)
-                        TextField("Buscar en observaciones...", text: $searchQuery)
-                            .font(.system(size: 14))
-                        if !searchQuery.isEmpty {
-                            Button(action: { searchQuery = "" }) {
-                                Image(systemName: "xmark.circle.fill")
-                                    .foregroundColor(.secondary)
-                            }
-                        }
-                    }
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 10)
-                    .background(Color(UIColor.secondarySystemBackground))
-                    .cornerRadius(20)
-
-                    Button(action: { showMonthPicker = true }) {
-                        HStack(spacing: 4) {
-                            Image(systemName: "line.3.horizontal.decrease.circle")
-                            Text("Mes")
-                                .bold()
-                                .font(.system(size: 13))
-                        }
-                        .padding(.horizontal, 14)
-                        .padding(.vertical, 10)
-                        .background(GlassColors.samsungBlue.opacity(0.12))
-                        .foregroundColor(GlassColors.samsungBlue)
-                        .cornerRadius(20)
-                    }
-                }
-
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 8) {
-                        FilterChip(label: "Todos", isSelected: selectedType == nil) {
-                            selectedType = nil
-                        }
-                        FilterChip(label: "Pases", isSelected: selectedType == .paseSalida) {
-                            selectedType = .paseSalida
-                        }
-                        FilterChip(label: "Vacaciones", isSelected: selectedType == .vacaciones) {
-                            selectedType = .vacaciones
-                        }
-                        FilterChip(label: "Personales", isSelected: selectedType == .diaPersonal) {
-                            selectedType = .diaPersonal
-                        }
-                        FilterChip(label: "Médicas", isSelected: selectedType == .incidenciaMedica) {
-                            selectedType = .incidenciaMedica
-                        }
-                    }
-                }
-            }
-            .padding(.horizontal, 20)
-            .padding(.bottom, 12)
-
-            if filteredRecords.isEmpty {
+        NavigationView {
+            VStack(spacing: 0) {
                 VStack(spacing: 10) {
-                    Spacer()
-                    Image(systemName: "doc.text.magnifyingglass")
-                        .font(.system(size: 40))
-                        .foregroundColor(.secondary.opacity(0.5))
-                    Text("No hay incidencias que coincidan\ncon los filtros seleccionados.")
-                        .multilineTextAlignment(.center)
-                        .font(.system(size: 15))
-                        .foregroundColor(.secondary)
-                    Spacer()
-                }
-            } else {
-                List {
-                    ForEach(filteredRecords) { record in
-                        RecordCardRow(record: record) {
-                            editingRecord = record
+                    HStack(spacing: 10) {
+                        HStack {
+                            Image(systemName: "magnifyingglass")
+                                .foregroundColor(GlassColors.samsungBlue)
+                            TextField("Buscar en observaciones...", text: $searchQuery)
+                                .font(.system(size: 14))
+                            if !searchQuery.isEmpty {
+                                Button(action: { searchQuery = "" }) {
+                                    Image(systemName: "xmark.circle.fill")
+                                        .foregroundColor(.secondary)
+                                }
+                            }
                         }
-                        .listRowSeparator(.hidden)
-                        .listRowBackground(Color.clear)
-                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-                            Button(role: .destructive) {
-                                viewModel.deleteRecord(record)
-                            } label: {
-                                Label("Eliminar", systemImage: "trash")
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 10)
+                        .background(Color(UIColor.secondarySystemBackground))
+                        .cornerRadius(20)
+
+                        Button(action: { showMonthPicker = true }) {
+                            HStack(spacing: 4) {
+                                Image(systemName: "line.3.horizontal.decrease.circle")
+                                Text("Mes")
+                                    .bold()
+                                    .font(.system(size: 13))
+                            }
+                            .padding(.horizontal, 14)
+                            .padding(.vertical, 10)
+                            .background(GlassColors.samsungBlue.opacity(0.12))
+                            .foregroundColor(GlassColors.samsungBlue)
+                            .cornerRadius(20)
+                        }
+                    }
+
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 8) {
+                            FilterChip(label: "Todos", isSelected: selectedType == nil) {
+                                selectedType = nil
+                            }
+                            FilterChip(label: "Pases", isSelected: selectedType == .paseSalida) {
+                                selectedType = .paseSalida
+                            }
+                            FilterChip(label: "Vacaciones", isSelected: selectedType == .vacaciones) {
+                                selectedType = .vacaciones
+                            }
+                            FilterChip(label: "Personales", isSelected: selectedType == .diaPersonal) {
+                                selectedType = .diaPersonal
+                            }
+                            FilterChip(label: "Médicas", isSelected: selectedType == .incidenciaMedica) {
+                                selectedType = .incidenciaMedica
                             }
                         }
                     }
                 }
-                .listStyle(.plain)
+                .padding(.horizontal, 20)
+                .padding(.top, 10)
+                .padding(.bottom, 12)
+
+                if filteredRecords.isEmpty {
+                    VStack(spacing: 10) {
+                        Spacer()
+                        Image(systemName: "doc.text.magnifyingglass")
+                            .font(.system(size: 40))
+                            .foregroundColor(.secondary.opacity(0.5))
+                        Text("No hay incidencias registradas\npara este periodo.")
+                            .multilineTextAlignment(.center)
+                            .font(.system(size: 15))
+                            .foregroundColor(.secondary)
+                        Spacer()
+                    }
+                } else {
+                    List {
+                        ForEach(filteredRecords) { record in
+                            RecordCardRow(record: record) {
+                                editingRecord = record
+                            }
+                            .listRowSeparator(.hidden)
+                            .listRowBackground(Color.clear)
+                            .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                                Button(role: .destructive) {
+                                    viewModel.deleteRecord(record)
+                                } label: {
+                                    Label("Eliminar", systemImage: "trash")
+                                }
+                            }
+                        }
+                    }
+                    .listStyle(.plain)
+                }
             }
-        }
-        .sheet(isPresented: $showMonthPicker) {
-            MonthPickerModal(viewModel: viewModel, isPresented: $showMonthPicker)
-        }
-        .sheet(item: $editingRecord) { record in
-            AddEditRecordView(viewModel: viewModel, editingRecord: record)
+            .navigationTitle("Historial: \(monthNames[viewModel.filterMonth]) \(String(viewModel.filterYear))")
+            .navigationBarTitleDisplayMode(.inline)
+            .sheet(isPresented: $showMonthPicker) {
+                MonthPickerModal(viewModel: viewModel, isPresented: $showMonthPicker)
+            }
+            .sheet(item: $editingRecord) { record in
+                AddEditRecordView(viewModel: viewModel, editingRecord: record)
+            }
         }
     }
 }
@@ -171,24 +164,19 @@ struct RecordCardRow: View {
 
                     Spacer()
 
-                    Text(record.priority.rawValue)
-                        .font(.caption2)
-                        .bold()
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 3)
-                        .background(record.priority.badgeColor.opacity(0.15))
-                        .foregroundColor(record.priority.badgeColor)
-                        .cornerRadius(8)
+                    Text(record.formattedDate)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
                 }
 
                 HStack {
-                    Text(record.formattedDate)
+                    Text("\(record.startTime) - \(record.endTime)")
                         .font(.caption)
                         .foregroundColor(.secondary)
 
                     Spacer()
 
-                    Text("\(record.startTime) - \(record.endTime) (\(record.durationFormatted))")
+                    Text(record.durationFormatted)
                         .font(.caption)
                         .bold()
                         .foregroundColor(GlassColors.samsungBlue)

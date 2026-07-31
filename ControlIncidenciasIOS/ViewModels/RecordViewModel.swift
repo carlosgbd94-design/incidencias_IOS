@@ -20,14 +20,11 @@ class RecordViewModel: ObservableObject {
     @Published var filterMonth: Int = Calendar.current.component(.month, from: Date()) - 1
     @Published var filterYear: Int = Calendar.current.component(.year, from: Date())
 
-    private let recordsStorageKey = "saved_records_ios"
-    private let profileStorageKey = "saved_profile_ios"
+    private let recordsStorageKey = "saved_records_ios_v2"
+    private let profileStorageKey = "saved_profile_ios_v2"
 
     init() {
         loadData()
-        if records.isEmpty {
-            seedSampleData()
-        }
     }
 
     func loadData() {
@@ -112,52 +109,5 @@ class RecordViewModel: ObservableObject {
         let parts = timeStr.split(separator: ":").compactMap { Int($0) }
         guard parts.count == 2 else { return 0 }
         return parts[0] * 60 + parts[1]
-    }
-
-    private func seedSampleData() {
-        let now = Date().timeIntervalSince1970
-        let day: Double = 86400
-
-        let sample1 = RecordEntity(
-            dateTimestamp: now,
-            endDateTimestamp: now,
-            type: .paseSalida,
-            startTime: "13:55",
-            endTime: "14:30",
-            returns: false,
-            durationMinutesCalculated: 35,
-            priority: .media,
-            observations: "Me quise ir temprano",
-            profileId: activeProfile.id
-        )
-
-        let sample2 = RecordEntity(
-            dateTimestamp: now - (6 * day),
-            endDateTimestamp: now - (6 * day),
-            type: .paseSalida,
-            startTime: "14:01",
-            endTime: "14:30",
-            returns: false,
-            durationMinutesCalculated: 29,
-            priority: .baja,
-            observations: "Me quise ir temprano",
-            profileId: activeProfile.id
-        )
-
-        let sample3 = RecordEntity(
-            dateTimestamp: now - (13 * day),
-            endDateTimestamp: now - (13 * day),
-            type: .paseSalida,
-            startTime: "14:02",
-            endTime: "14:30",
-            returns: false,
-            durationMinutesCalculated: 28,
-            priority: .baja,
-            observations: "Me salí temprano con Les y Liz",
-            profileId: activeProfile.id
-        )
-
-        self.records = [sample1, sample2, sample3]
-        saveData()
     }
 }

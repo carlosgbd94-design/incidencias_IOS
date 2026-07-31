@@ -36,19 +36,3 @@ enum RecordType: String, Codable, CaseIterable, Identifiable {
         }
     }
 }
-
-enum PrioritySeverity: String, Codable, CaseIterable, Identifiable {
-    case baja = "Baja"
-    case media = "Media"
-    case alta = "Alta"
-
-    var id: String { rawValue }
-
-    var badgeColor: Color {
-        switch self {
-        case .baja: return Color(red: 16/255, green: 185/255, blue: 129/255)
-        case .media: return Color(red: 245/255, green: 158/255, blue: 11/255)
-        case .alta: return Color(red: 239/255, green: 68/255, blue: 68/255)
-        }
-    }
-}

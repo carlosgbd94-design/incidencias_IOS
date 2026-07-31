@@ -11,7 +11,6 @@ struct AddEditRecordView: View {
     @State private var startTime: Date = Date()
     @State private var endTime: Date = Date()
     @State private var returns: Bool = false
-    @State private var priority: PrioritySeverity = .baja
     @State private var observations: String = ""
 
     private let timeFormatter: DateFormatter = {
@@ -73,15 +72,8 @@ struct AddEditRecordView: View {
                     }
                 }
 
-                Section("Detalles") {
-                    Picker("Prioridad", selection: $priority) {
-                        ForEach(PrioritySeverity.allCases) { p in
-                            Text(p.rawValue).tag(p)
-                        }
-                    }
-                    .pickerStyle(.segmented)
-
-                    TextField("Observaciones...", text: $observations)
+                Section("Observaciones") {
+                    TextField("Escribe una breve descripción...", text: $observations)
                 }
             }
             .navigationTitle(editingRecord == nil ? "Nueva Incidencia" : "Editar Incidencia")
@@ -105,7 +97,6 @@ struct AddEditRecordView: View {
                     selectedType = record.type
                     recordDate = record.date
                     endDate = record.endDate
-                    priority = record.priority
                     observations = record.observations
                     returns = record.returns
 
@@ -134,7 +125,6 @@ struct AddEditRecordView: View {
             endTime: returns ? endStr : viewModel.activeProfile.workEndTime,
             returns: returns,
             durationMinutesCalculated: calculatedMinutes,
-            priority: priority,
             observations: observations,
             profileId: viewModel.activeProfile.id
         )
@@ -146,7 +136,6 @@ struct AddEditRecordView: View {
         record.endTime = returns ? endStr : viewModel.activeProfile.workEndTime
         record.returns = returns
         record.durationMinutesCalculated = calculatedMinutes
-        record.priority = priority
         record.observations = observations
 
         viewModel.addOrUpdateRecord(record)

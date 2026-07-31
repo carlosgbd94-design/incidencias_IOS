@@ -9,7 +9,6 @@ struct RecordEntity: Identifiable, Codable, Equatable {
     var endTime: String
     var returns: Bool
     var durationMinutesCalculated: Int
-    var priority: PrioritySeverity
     var observations: String
     var profileId: String
 
