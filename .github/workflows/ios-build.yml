@@ -17,6 +17,20 @@ jobs:
       - name: Select Xcode Version
         run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
+      - name: Setup ImageMagick for AppIcon Resizing
+        run: brew install imagemagick || true
+
+      - name: Resize AppIcon PNGs for all iOS idiom scales
+        run: |
+          cd ControlIncidenciasIOS/Assets.xcassets/AppIcon.appiconset
+          magick convert AppIcon-1024.png -resize 1024x1024! AppIcon-1024.png
+          magick convert AppIcon-1024.png -resize 180x180! AppIcon-180.png
+          magick convert AppIcon-1024.png -resize 120x120! AppIcon-120.png
+          magick convert AppIcon-1024.png -resize 87x87! AppIcon-87.png
+          magick convert AppIcon-1024.png -resize 58x58! AppIcon-58.png
+          magick convert AppIcon-1024.png -resize 80x80! AppIcon-80.png
+          magick convert AppIcon-1024.png -resize 60x60! AppIcon-60.png
+
       - name: Build iOS Application Payload
         run: |
           xcodebuild -project ControlIncidenciasIOS.xcodeproj \
