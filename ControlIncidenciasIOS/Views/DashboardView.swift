@@ -103,7 +103,7 @@ struct DashboardView: View {
                     .glassCard()
 
                     VStack(alignment: .leading, spacing: 14) {
-                        Text("Resumen Anual (\(Calendar.current.component(.year, from: Date())))")
+                        Text("Resumen Anual (\(String(Calendar.current.component(.year, from: Date()))))")
                             .font(.headline)
                             .bold()
 

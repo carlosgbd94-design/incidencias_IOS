@@ -35,19 +35,38 @@ struct MainTabView: View {
             HStack {
                 Spacer()
                 Button(action: { showAddSheet = true }) {
-                    Image(systemName: "plus")
-                        .font(.system(size: 22, weight: .bold))
-                        .foregroundColor(.white)
-                        .frame(width: 56, height: 56)
-                        .background(
-                            LinearGradient(
-                                colors: [GlassColors.samsungBlue, Color.blue],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
+                    ZStack {
+                        Circle()
+                            .fill(.ultraThinMaterial)
+                            .shadow(color: Color.black.opacity(0.15), radius: 10, x: 0, y: 5)
+
+                        Circle()
+                            .fill(
+                                LinearGradient(
+                                    colors: [
+                                        GlassColors.samsungBlue.opacity(0.85),
+                                        Color.blue.opacity(0.65)
+                                    ],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                )
                             )
-                        )
-                        .clipShape(Circle())
-                        .shadow(color: GlassColors.samsungBlue.opacity(0.4), radius: 10, x: 0, y: 5)
+
+                        Circle()
+                            .stroke(
+                                LinearGradient(
+                                    colors: [Color.white.opacity(0.6), Color.white.opacity(0.2)],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                ),
+                                lineWidth: 1.5
+                            )
+
+                        Image(systemName: "plus")
+                            .font(.system(size: 24, weight: .bold))
+                            .foregroundColor(.white)
+                    }
+                    .frame(width: 60, height: 60)
                 }
                 .padding(.trailing, 24)
                 .padding(.bottom, 60)
