@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000012C5A000100000001 /* ControlIncidenciasIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000022C5A000100000001 /* ControlIncidenciasIOSApp.swift */; };
+		A10000032C5A000100000001 /* RecordType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000042C5A000100000001 /* RecordType.swift */; };
+		A10000052C5A000100000001 /* RecordEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000062C5A000100000001 /* RecordEntity.swift */; };
+		A10000072C5A000100000001 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000082C5A000100000001 /* UserProfile.swift */; };
+		A10000092C5A000100000001 /* GlassTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000102C5A000100000001 /* GlassTheme.swift */; };
+		A10000112C5A000100000001 /* RecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000122C5A000100000001 /* RecordViewModel.swift */; };
+		A10000132C5A000100000001 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000142C5A000100000001 /* DashboardView.swift */; };
+		A10000152C5A000100000001 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000162C5A000100000001 /* HistoryView.swift */; };
+		A10000172C5A000100000001 /* AddEditRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000182C5A000100000001 /* AddEditRecordView.swift */; };
+		A10000192C5A000100000001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100001A2C5A000100000001 /* SettingsView.swift */; };
+		A100001B2C5A000100000001 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100001C2C5A000100000001 /* MainTabView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A10000002C5A000100000001 /* ControlIncidenciasIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlIncidenciasIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000022C5A000100000001 /* ControlIncidenciasIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlIncidenciasIOSApp.swift; sourceTree = "<group>"; };
+		A10000042C5A000100000001 /* RecordType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/RecordType.swift; sourceTree = "<group>"; };
+		A10000062C5A000100000001 /* RecordEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/RecordEntity.swift; sourceTree = "<group>"; };
+		A10000082C5A000100000001 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/UserProfile.swift; sourceTree = "<group>"; };
+		A10000102C5A000100000001 /* GlassTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme/GlassTheme.swift; sourceTree = "<group>"; };
+		A10000122C5A000100000001 /* RecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/RecordViewModel.swift; sourceTree = "<group>"; };
+		A10000142C5A000100000001 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/DashboardView.swift; sourceTree = "<group>"; };
+		A10000162C5A000100000001 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/HistoryView.swift; sourceTree = "<group>"; };
+		A10000182C5A000100000001 /* AddEditRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/AddEditRecordView.swift; sourceTree = "<group>"; };
+		A100001A2C5A000100000001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/SettingsView.swift; sourceTree = "<group>"; };
+		A100001C2C5A000100000001 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/MainTabView.swift; sourceTree = "<group>"; };
+		A100001D2C5A000100000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A100001E2C5A000100000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A100001F2C5A000100000001 = {
+			isa = PBXGroup;
+			children = (
+				A10000202C5A000100000001 /* ControlIncidenciasIOS */,
+				A10000212C5A000100000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10000202C5A000100000001 /* ControlIncidenciasIOS */ = {
+			isa = PBXGroup;
+			children = (
+				A10000022C5A000100000001 /* ControlIncidenciasIOSApp.swift */,
+				A10000042C5A000100000001 /* RecordType.swift */,
+				A10000062C5A000100000001 /* RecordEntity.swift */,
+				A10000082C5A000100000001 /* UserProfile.swift */,
+				A10000102C5A000100000001 /* GlassTheme.swift */,
+				A10000122C5A000100000001 /* RecordViewModel.swift */,
+				A10000142C5A000100000001 /* DashboardView.swift */,
+				A10000162C5A000100000001 /* HistoryView.swift */,
+				A10000182C5A000100000001 /* AddEditRecordView.swift */,
+				A100001A2C5A000100000001 /* SettingsView.swift */,
+				A100001C2C5A000100000001 /* MainTabView.swift */,
+				A100001D2C5A000100000001 /* Info.plist */,
+			);
+			path = ControlIncidenciasIOS;
+			sourceTree = "<group>";
+		};
+		A10000212C5A000100000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10000002C5A000100000001 /* ControlIncidenciasIOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000222C5A000100000001 /* ControlIncidenciasIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000232C5A000100000001 /* Build configuration list for PBXNativeTarget "ControlIncidenciasIOS" */;
+			buildPhases = (
+				A10000242C5A000100000001 /* Sources */,
+				A100001E2C5A000100000001 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ControlIncidenciasIOS;
+			productName = ControlIncidenciasIOS;
+			productReference = A10000002C5A000100000001 /* ControlIncidenciasIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10000252C5A000100000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A10000222C5A000100000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = A10000262C5A000100000001 /* Build configuration list for PBXProject "ControlIncidenciasIOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = es;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				es,
+				Base,
+			);
+			mainGroup = A100001F2C5A000100000001;
+			productRefGroup = A10000212C5A000100000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000222C5A000100000001 /* ControlIncidenciasIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10000242C5A000100000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000012C5A000100000001 /* ControlIncidenciasIOSApp.swift in Sources */,
+				A10000032C5A000100000001 /* RecordType.swift in Sources */,
+				A10000052C5A000100000001 /* RecordEntity.swift in Sources */,
+				A10000072C5A000100000001 /* UserProfile.swift in Sources */,
+				A10000092C5A000100000001 /* GlassTheme.swift in Sources */,
+				A10000112C5A000100000001 /* RecordViewModel.swift in Sources */,
+				A10000132C5A000100000001 /* DashboardView.swift in Sources */,
+				A10000152C5A000100000001 /* HistoryView.swift in Sources */,
+				A10000172C5A000100000001 /* AddEditRecordView.swift in Sources */,
+				A10000192C5A000100000001 /* SettingsView.swift in Sources */,
+				A100001B2C5A000100000001 /* MainTabView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A10000272C5A000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGNING_REQUIRED = NO;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_PROTOS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ControlIncidenciasIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.controlincidencias;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A10000282C5A000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGNING_REQUIRED = NO;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_PROTOS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = ControlIncidenciasIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.controlincidencias;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A10000292C5A000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ControlIncidenciasIOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.controlincidencias;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Debug;
+		};
+		A100002A2C5A000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ControlIncidenciasIOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.controlincidencias;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10000232C5A000100000001 /* Build configuration list for PBXNativeTarget "ControlIncidenciasIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000292C5A000100000001 /* Debug */,
+				A100002A2C5A000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10000262C5A000100000001 /* Build configuration list for PBXProject "ControlIncidenciasIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000272C5A000100000001 /* Debug */,
+				A10000282C5A000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A10000252C5A000100000001 /* Project object */;
+}
